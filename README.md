@@ -25,4 +25,9 @@ This is not the first time this idea has been made, but this is my approach to t
 
 Feel free to change it up however you like and use it, but please if you use any part of this code give credit.
 
+
+# Download
+To download, go to the releases tab, or just press on this link: https://github.com/S-AlAnsari/SAS/releases/
+
+
 Thank you!
