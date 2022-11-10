@@ -5,8 +5,6 @@ import PySimpleGUI as sg
 from subprocess import Popen
 def popUp(account):
     if(account == 'first'):
-        # Add a touch of color
-        # All the stuff inside your window.
         layout = [  [sg.Text('First account')],
                     [sg.Text('Username'), sg.InputText(size=(10,30))],
                     [sg.Button('Ok'), sg.Button('Cancel')] ]
@@ -16,13 +14,12 @@ def popUp(account):
         # Event Loop to process "events" and get the "values" of the inputs
         while True:
             event, values = window.read()
-            if event == sg.WIN_CLOSED or event == 'Cancel': # if user closes window or clicks cancel
+            if event == sg.WIN_CLOSED or event == 'Exit': # if user closes window or clicks exit
                 break
             saveUsername('first',values[0])
             createBatch('first')
             window.close()
     else:
-        # Add a touch of color
         # All the stuff inside your window.
         layout = [  [sg.Text('Second account')],
                     [sg.Text('Username'), sg.InputText(size=(10,30))],
@@ -33,7 +30,7 @@ def popUp(account):
         # Event Loop to process "events" and get the "values" of the inputs
         while True:
             event, values = window.read()
-            if event == sg.WIN_CLOSED or event == 'Cancel': # if user closes window or clicks cancel
+            if event == sg.WIN_CLOSED or event == 'Exit': # if user closes window or clicks exit
                 break
             saveUsername('second',values[0])
             createBatch('second')
@@ -89,16 +86,10 @@ if(os.path.isfile(cwd+'/first account.dat') and os.path.isfile(cwd+'/second acco
         elif event in(firstUsername):
             
             subprocess.call([cwd+"/first account.bat"], shell=False)
-            # p = Popen()
-            # stdout, stderr = p.communicate()
         elif event in(secondUsername):
             subprocess.call([cwd+"/second account.bat"], shell=False)
-            # p = Popen("/first account.bat", cwd=cwd2)
-            # stdout, stderr = p.communicate()
         elif event in('Second Account'):
             subprocess.call([cwd+"/second account.bat"], shell=False)
-            # p = Popen("/first account.bat", cwd=cwd2)
-            # stdout, stderr = p.communicate()+
         else:
             popUp('second')
 
@@ -119,12 +110,8 @@ else:
         elif event in('First Account     '):
             
             subprocess.call([cwd+"/first account.bat"], shell=False)
-            # p = Popen()
-            # stdout, stderr = p.communicate()
         elif event in('Second Account'):
             subprocess.call([cwd+"/second account.bat"], shell=False)
-            # p = Popen("/first account.bat", cwd=cwd2)
-            # stdout, stderr = p.communicate()+
         else:
             popUp('second')
 
