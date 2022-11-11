@@ -27,7 +27,7 @@ Feel free to change it up however you like and use it, but please if you use any
 
 
 # Download
-To download, go to the releases tab, or just press on this link: https://github.com/S-AlAnsari/SAS/releases/
+To download, go to the releases tab, or just press on this link: [https://github.com/S-AlAnsari/SAS/releases/](https://github.com/S-AlAnsari/Steam-Account-Switcher-SAS-/releases/)
 
 
 Thank you!
