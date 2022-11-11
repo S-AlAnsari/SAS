@@ -1,4 +1,4 @@
-# SAS
+# Steam Account Switcher (SAS)
 Steam account switcher done through python.
 
 For the GUI, I have used "PySimpleGUI", which you can check out here: https://www.pysimplegui.org/en/latest/
